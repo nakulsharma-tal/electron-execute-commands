@@ -8,7 +8,7 @@
     "start": "electron .",
     "build": "electron-packager . command-executer --platform win32 --arch x64 --out dist/",
     "prepackage:win": "npm run build",
-    "package:win": "electron-installer-windows --src dist/app-win32-x64/ --dest dist/installers/"
+    "package:win": "electron-installer-windows --src dist/command-executer-win32-x64/ --dest dist/installers/"
   },
   "repository": "https://github.com/nakulsharma-tal/electron-execute-commands",
   "keywords": [
@@ -20,9 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^11.0.1",
+    "electron-installer-windows": "^3.0.0",
     "electron-packager": "^15.1.0"
-  },
-  "dependencies": {
-    "electron-installer-windows": "^3.0.0"
   }
 }
