@@ -1,8 +1,9 @@
 {
   "name": "electron-quick-start",
+  "productName": "Command Executer",
   "version": "1.0.0",
   "description": "A minimal Electron application",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "electron ."
   },

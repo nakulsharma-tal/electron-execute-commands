@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Command Executer</title>
+  </head>
+
+  <body>
+    <h1>Hello from Command Executer!</h1>
+    We are using Node.js <span id="node-version"></span>, Chromium
+    <span id="chrome-version"></span>, and Electron
+    <span id="electron-version"></span>.
+
+    <div class="led-functionality-container">
+      <div class="btn-container">
+        <button class="btn led-on-btn" id="led-on-button">LED ON</button>
+
+        <button class="btn led-off-btn" id="led-off-button">LED OFF</button>
+      </div>
+
+      <div class="result-container">
+        STDOUT :
+        <p class="result-text stdout" id="stdout-text"></p>
+
+        ERROR :
+        <p class="result-text error" id="error-text"></p>
+
+        STDERR :
+        <p class="result-text stderr" id="stderr-text"></p>
+      </div>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>
