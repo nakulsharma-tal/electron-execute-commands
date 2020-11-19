@@ -10,7 +10,7 @@
     "prepackage:win": "npm run build",
     "package:win": "electron-installer-windows --src dist/app-win32-x64/ --dest dist/installers/"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/nakulsharma-tal/electron-execute-commands",
   "keywords": [
     "Electron",
     "demo",
