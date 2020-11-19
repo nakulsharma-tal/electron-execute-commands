@@ -1,23 +1,28 @@
 {
-  "name": "electron-quick-start",
-  "productName": "Command Executer",
+  "name": "command-executer",
+  "productName": "command-executer",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "src/main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-packager . command-executer --platform win32 --arch x64 --out dist/",
+    "prepackage:win": "npm run build",
+    "package:win": "electron-installer-windows --src dist/app-win32-x64/ --dest dist/installers/"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "demo",
+    "POC"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Nakul Sharma",
+  "license": "MIT",
   "devDependencies": {
-    "electron": "^11.0.1"
+    "electron": "^11.0.1",
+    "electron-packager": "^15.1.0"
+  },
+  "dependencies": {
+    "electron-installer-windows": "^3.0.0"
   }
 }
