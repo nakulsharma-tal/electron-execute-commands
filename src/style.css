@@ -22,12 +22,15 @@ body {
   outline: none;
 }
 
-.led-on-btn {
+.first-btn {
   margin: 0;
+}
+
+.open-btn {
   color: green;
 }
 
-.led-off-btn {
+.close-btn {
   color: orangered;
 }
 
