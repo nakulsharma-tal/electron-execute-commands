@@ -30,58 +30,114 @@
     <h4>Plink executable path : <code id="plink-path"></code></h4>
     <h4>IP : <code id="rpi-ip"></code></h4>
 
-    <div class="led-functionality-container">
-      <div class="btn-container">
-        <button class="btn open-btn first-btn" id="open-lid-with-plink-button">
-          OPEN LID WITH PLINK
-        </button>
-        <img
-          src="./assets/giphy.webp"
-          alt="working..."
-          class="loader"
-          id="open-lid-with-plink-gif"
-        />
+    <div class="command-execution-container">
+      <div class="led-functionality-container plink-command-container">
+        <div class="btn-container">
+          <button
+            class="btn open-btn first-btn"
+            id="open-lid-with-plink-button"
+          >
+            OPEN LID WITH PLINK
+          </button>
+          <img
+            src="./assets/giphy.webp"
+            alt="working..."
+            class="loader"
+            id="open-lid-with-plink-gif"
+          />
 
-        <button class="btn close-btn" id="close-lid-with-plink-button">
-          CLOSE LID WITH PLINK
-        </button>
-        <img
-          src="./assets/giphy.webp"
-          alt="working..."
-          class="loader"
-          id="close-lid-with-plink-gif"
-        />
+          <button class="btn close-btn" id="close-lid-with-plink-button">
+            CLOSE LID WITH PLINK
+          </button>
+          <img
+            src="./assets/giphy.webp"
+            alt="working..."
+            class="loader"
+            id="close-lid-with-plink-gif"
+          />
 
-        <button class="btn open-btn" id="open-tray-with-plink-button">
-          OPEN TRAY WITH PLINK
-        </button>
-        <img
-          src="./assets/giphy.webp"
-          alt="working..."
-          class="loader"
-          id="open-tray-with-plink-gif"
-        />
+          <button class="btn open-btn" id="open-tray-with-plink-button">
+            OPEN TRAY WITH PLINK
+          </button>
+          <img
+            src="./assets/giphy.webp"
+            alt="working..."
+            class="loader"
+            id="open-tray-with-plink-gif"
+          />
 
-        <button class="btn close-btn" id="close-tray-with-plink-button">
-          CLOSE TRAY WITH PLINK
-        </button>
-        <img
-          src="./assets/giphy.webp"
-          alt="working..."
-          class="loader"
-          id="close-tray-with-plink-gif"
-        />
+          <button class="btn close-btn" id="close-tray-with-plink-button">
+            CLOSE TRAY WITH PLINK
+          </button>
+          <img
+            src="./assets/giphy.webp"
+            alt="working..."
+            class="loader"
+            id="close-tray-with-plink-gif"
+          />
+        </div>
+
+        <div class="result-container">
+          STDOUT :
+          <p class="result-text stdout" id="stdout-text"></p>
+
+          ERROR :
+          <p class="result-text error" id="error-text"></p>
+
+          STDERR :
+          <p class="result-text stderr" id="stderr-text"></p>
+        </div>
       </div>
 
-      <div class="result-container">
-        STDOUT :
-        <p class="result-text stdout" id="stdout-text"></p>
+      <div class="led-functionality-container ssh-command-container">
+        <div class="btn-container">
+          <button class="btn open-btn first-btn" id="open-lid-button">
+            OPEN LID
+          </button>
+          <img
+            src="./assets/giphy.webp"
+            alt="working..."
+            class="loader"
+            id="open-lid-gif"
+          />
 
-        ERROR :
-        <p class="result-text error" id="error-text"></p>
+          <button class="btn close-btn" id="close-lid-button">CLOSE LID</button>
+          <img
+            src="./assets/giphy.webp"
+            alt="working..."
+            class="loader"
+            id="close-lid-gif"
+          />
 
-        STDERR :
-        <p class="result-text stderr" id="stderr-text"></p>
+          <button class="btn open-btn" id="open-tray-button">OPEN TRAY</button>
+          <img
+            src="./assets/giphy.webp"
+            alt="working..."
+            class="loader"
+            id="open-tray-gif"
+          />
+
+          <button class="btn close-btn" id="close-tray-button">
+            CLOSE TRAY
+          </button>
+          <img
+            src="./assets/giphy.webp"
+            alt="working..."
+            class="loader"
+            id="close-tray-gif"
+          />
+        </div>
+
+        <div class="result-container">
+          ON CLOSE :
+          <p class="result-text stdout" id="on-close-text"></p>
+
+          ON DATA :
+          <p class="result-text stdout" id="on-data-text"></p>
+
+          ON ERROR :
+          <p class="result-text stderr" id="on-error-text"></p>
+        </div>
       </div>
     </div>
 

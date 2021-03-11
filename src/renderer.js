@@ -4,7 +4,7 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
-const execute = require("./util");
+const { execute, sendCommandToHardware } = require("./util");
 const {
   OPEN_LID_WITH_PLINK_BUTTON,
   CLOSE_LID_WITH_PLINK_BUTTON,
@@ -14,12 +14,24 @@ const {
   CLOSE_LID_WITH_PLINK_GIF,
   OPEN_TRAY_WITH_PLINK_GIF,
   CLOSE_TRAY_WITH_PLINK_GIF,
+  OPEN_LID_BUTTON,
+  CLOSE_LID_BUTTON,
+  OPEN_TRAY_BUTTON,
+  CLOSE_TRAY_BUTTON,
+  OPEN_LID_GIF,
+  CLOSE_LID_GIF,
+  OPEN_TRAY_GIF,
+  CLOSE_TRAY_GIF,
 } = require("./elements");
 const {
   OPEN_LID_COMMAND_WITH_PLINK,
   CLOSE_LID_COMMAND_WITH_PLINK,
   OPEN_TRAY_COMMAND_WITH_PLINK,
   CLOSE_TRAY_COMMAND_WITH_PLINK,
+  OPEN_LID_COMMAND,
+  CLOSE_LID_COMMAND,
+  OPEN_TRAY_COMMAND,
+  CLOSE_TRAY_COMMAND,
   LOCAL_PLINK_EXE_PATH,
   SSH_IP,
   PYTHON_FILENAME,
@@ -58,4 +70,28 @@ CLOSE_TRAY_WITH_PLINK_BUTTON.addEventListener("click", (_) => {
   CLOSE_TRAY_WITH_PLINK_GIF.style.display = "inline-block";
 
   execute(CLOSE_TRAY_COMMAND_WITH_PLINK);
+});
+
+OPEN_LID_BUTTON.addEventListener("click", (_) => {
+  OPEN_LID_GIF.style.display = "inline-block";
+
+  sendCommandToHardware(OPEN_LID_COMMAND);
+});
+
+CLOSE_LID_BUTTON.addEventListener("click", (_) => {
+  CLOSE_LID_GIF.style.display = "inline-block";
+
+  sendCommandToHardware(CLOSE_LID_COMMAND);
+});
+
+OPEN_TRAY_BUTTON.addEventListener("click", (_) => {
+  OPEN_TRAY_GIF.style.display = "inline-block";
+
+  sendCommandToHardware(OPEN_TRAY_COMMAND);
+});
+
+CLOSE_TRAY_BUTTON.addEventListener("click", (_) => {
+  CLOSE_TRAY_GIF.style.display = "inline-block";
+
+  sendCommandToHardware(CLOSE_TRAY_COMMAND);
 });
