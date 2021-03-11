@@ -1,15 +1,24 @@
-const DEFAULT_LED_IP = "192.168.1.22";
+const SSH_IP = "192.168.0.100";
+const SSH_USERNAME = "pi";
+const SSH_PASSWORD = "Avichal";
 
-const DEFAULT_PLINK_EXE_PATH = 'C://"Program Files"//PuTTY//plink.exe';
+const LOCAL_PLINK_EXE_PATH = 'C://"Program Files"//PuTTY//plink.exe';
 
-const OPEN_LID_COMMAND = `${DEFAULT_PLINK_EXE_PATH} -l pi -pw Avichal -batch ${DEFAULT_LED_IP} sudo python Desktop/l.py -ol LidOpen`;
-const CLOSE_LID_COMMAND = `${DEFAULT_PLINK_EXE_PATH} -l pi -pw Avichal -batch ${DEFAULT_LED_IP} sudo python Desktop/l.py -il LidClose`;
-const OPEN_TRAY_COMMAND = `${DEFAULT_PLINK_EXE_PATH} -l pi -pw Avichal -batch ${DEFAULT_LED_IP} sudo python Desktop/l.py -ot TrayForward`;
-const CLOSE_TRAY_COMMAND = `${DEFAULT_PLINK_EXE_PATH} -l pi -pw Avichal -batch ${DEFAULT_LED_IP} sudo python Desktop/l.py -it TrayBackward`;
+const PYTHON_FILENAME = "l.py";
+const PYTHON_FILE_DIR = "Desktop";
+
+const OPEN_LID_COMMAND_WITH_PLINK = `${LOCAL_PLINK_EXE_PATH} -l ${SSH_USERNAME} -pw ${SSH_PASSWORD} -batch ${SSH_IP} sudo python ${PYTHON_FILE_DIR}/${PYTHON_FILENAME} -ol LidOpen`;
+const CLOSE_LID_COMMAND_WITH_PLINK = `${LOCAL_PLINK_EXE_PATH} -l ${SSH_USERNAME} -pw ${SSH_PASSWORD} -batch ${SSH_IP} sudo python ${PYTHON_FILE_DIR}/${PYTHON_FILENAME} -il LidClose`;
+const OPEN_TRAY_COMMAND_WITH_PLINK = `${LOCAL_PLINK_EXE_PATH} -l ${SSH_USERNAME} -pw ${SSH_PASSWORD} -batch ${SSH_IP} sudo python ${PYTHON_FILE_DIR}/${PYTHON_FILENAME} -ot TrayForward`;
+const CLOSE_TRAY_COMMAND_WITH_PLINK = `${LOCAL_PLINK_EXE_PATH} -l ${SSH_USERNAME} -pw ${SSH_PASSWORD} -batch ${SSH_IP} sudo python ${PYTHON_FILE_DIR}/${PYTHON_FILENAME} -it TrayBackward`;
 
 module.exports = {
-  OPEN_LID_COMMAND,
-  CLOSE_LID_COMMAND,
-  OPEN_TRAY_COMMAND,
-  CLOSE_TRAY_COMMAND,
+  OPEN_LID_COMMAND_WITH_PLINK,
+  CLOSE_LID_COMMAND_WITH_PLINK,
+  OPEN_TRAY_COMMAND_WITH_PLINK,
+  CLOSE_TRAY_COMMAND_WITH_PLINK,
+  LOCAL_PLINK_EXE_PATH,
+  SSH_IP,
+  PYTHON_FILENAME,
+  PYTHON_FILE_DIR,
 };
