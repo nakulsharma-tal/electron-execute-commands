@@ -22,6 +22,8 @@ const {
   CLOSE_LID_GIF,
   OPEN_TRAY_GIF,
   CLOSE_TRAY_GIF,
+  SCP_FROM_RPI_BUTTON,
+  SCP_FROM_RPI_GIF,
 } = require("./elements");
 const {
   OPEN_LID_COMMAND_WITH_PLINK,
@@ -36,6 +38,7 @@ const {
   SSH_IP,
   PYTHON_FILENAME,
   PYTHON_FILE_DIR,
+  SCP_FROM_RPI_COMMAND,
 } = require("./commands");
 
 const replaceText = (selector, text) => {
@@ -94,4 +97,10 @@ CLOSE_TRAY_BUTTON.addEventListener("click", (_) => {
   CLOSE_TRAY_GIF.style.display = "inline-block";
 
   sendCommandToHardware(CLOSE_TRAY_COMMAND);
+});
+
+SCP_FROM_RPI_BUTTON.addEventListener("click", (_) => {
+  SCP_FROM_RPI_GIF.style.display = "inline-block";
+
+  execute(SCP_FROM_RPI_COMMAND);
 });

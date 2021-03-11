@@ -38,6 +38,9 @@ const CLOSE_LID_GIF = document.getElementById("close-lid-gif");
 const OPEN_TRAY_GIF = document.getElementById("open-tray-gif");
 const CLOSE_TRAY_GIF = document.getElementById("close-tray-gif");
 
+const SCP_FROM_RPI_BUTTON = document.getElementById("scp-from-rpi-button");
+const SCP_FROM_RPI_GIF = document.getElementById("scp-from-rpi-gif");
+
 module.exports = {
   OPEN_LID_WITH_PLINK_BUTTON,
   CLOSE_LID_WITH_PLINK_BUTTON,
@@ -62,4 +65,7 @@ module.exports = {
   CLOSE_LID_GIF,
   OPEN_TRAY_GIF,
   CLOSE_TRAY_GIF,
+
+  SCP_FROM_RPI_BUTTON,
+  SCP_FROM_RPI_GIF,
 };
