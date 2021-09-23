@@ -24,6 +24,6 @@
     "electron-packager": "^15.1.0"
   },
   "dependencies": {
-    "ssh2": "^0.8.9"
+    "ssh2": "^1.4.0"
   }
 }
