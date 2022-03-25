@@ -19,7 +19,7 @@
   "author": "Nakul Sharma",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^11.1.0",
+    "electron": "^13.6.6",
     "electron-installer-windows": "^3.0.0",
     "electron-packager": "^15.1.0"
   },
