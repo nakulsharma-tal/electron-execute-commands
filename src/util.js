@@ -6,6 +6,7 @@ const {
   CLOSE_LID_WITH_PLINK_GIF,
   OPEN_TRAY_WITH_PLINK_GIF,
   CLOSE_TRAY_WITH_PLINK_GIF,
+  SCP_FROM_RPI_GIF,
   STDOUT_TEXT_PARAGRAPH,
   ERROR_TEXT_PARAGRAPH,
   STDERR_TEXT_PARAGRAPH,
@@ -24,6 +25,7 @@ const hideLoader = () => {
   CLOSE_LID_WITH_PLINK_GIF.style.display = "none";
   OPEN_TRAY_WITH_PLINK_GIF.style.display = "none";
   CLOSE_TRAY_WITH_PLINK_GIF.style.display = "none";
+  SCP_FROM_RPI_GIF.style.display = "none";
 
   OPEN_LID_GIF.style.display = "none";
   CLOSE_LID_GIF.style.display = "none";
