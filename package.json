@@ -19,9 +19,9 @@
   "author": "Nakul Sharma",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^11.1.0",
+    "electron": "^25.4.0",
     "electron-installer-windows": "^3.0.0",
-    "electron-packager": "^15.1.0"
+    "electron-packager": "^17.1.1"
   },
   "dependencies": {
     "ssh2": "^1.4.0"
